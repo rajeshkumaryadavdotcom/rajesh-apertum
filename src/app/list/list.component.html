@@ -1,0 +1,26 @@
+<h1 class="pagetitle">User List</h1>
+
+<div class="container">
+  <div class="left-section">
+    <div class="header">
+      <div id="filter" class="animation a3">
+        <button class="button" (click)="filter()">Filter</button>
+        <small *ngIf="showHint"
+          ><b>Hint:</b>You can filter user whose age is between 20 to 29 and
+          whose name has more than 10 characters.</small
+        >
+      </div>
+      <div *ngFor="let user of users" class="user-list animation a1">
+        <app-card
+          [firstName]="user.firstName"
+          [lastName]="user.lastName"
+          [age]="user.age"
+        >
+        </app-card>
+      </div>
+    </div>
+  </div>
+  <div class="right-section">
+    <img src="assets/img/banner-user.png" alt="Login banner" />
+  </div>
+</div>

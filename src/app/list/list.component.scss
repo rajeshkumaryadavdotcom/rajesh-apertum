@@ -1,0 +1,19 @@
+.user-list {
+  display: flex;
+}
+app-card {
+  width: 100%;
+  border-bottom: 2px solid #b6e0cd;
+  padding: 5px;
+}
+small {
+  font-size: 11px;
+  color: #333;
+  margin: 5px;
+  display: block;
+}
+.right-section {
+  img {
+    max-width: 400px;
+  }
+}

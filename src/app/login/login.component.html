@@ -1,0 +1,50 @@
+<h1 class="pagetitle">User Login</h1>
+
+<div class="container">
+  <div class="left-section">
+    <div class="header">
+      <h1 class="animation a1">Welcome User!</h1>
+      <h4 class="animation a2">
+        Log in for entering your dashboard.
+      </h4>
+
+      <div class="animation a2 msg-box">
+        {{ msg }}
+      </div>
+    </div>
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+      <div class="form">
+        <input
+          type="email"
+          placeholder="Enter Username"
+          class="form-field animation a3"
+          name="id"
+          required
+          ngModel
+        />
+
+        <input
+          type="password"
+          class="form-field animation a4"
+          placeholder="Enter Password"
+          name="pwd"
+          required
+          ngModel
+        />
+        <p class="animation a5">
+          <a href="#" (click)="forgotPassword()">Forgot Password</a>
+        </p>
+        <button
+          class="animation a6"
+          type="submit"
+          [disabled]="loginForm.form.invalid"
+        >
+          LOGIN
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="right-section">
+    <img src="assets/img/banner-login.png" alt="Login banner" />
+  </div>
+</div>
